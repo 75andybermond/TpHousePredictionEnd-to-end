@@ -1,0 +1,122 @@
+<!doctype html>
+<html>
+<body>
+  <head>
+    <title>HomePage</title>
+    <link rel ="stylesheet" type="text/css" href="{{ url_for('static', filename='main.css') }}">
+  </head>
+  <body>
+    <h1 class="multicolor"> {{ message }}</h1>
+  </body>
+
+<form action="/result" method="POST">
+	<center>
+
+	<label for="nb_chambres">Nombre de chambres</label>
+	<select id="nb_chambres" name="nb_chambres">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+  	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+	<option value="8">8</option>
+  	<option value="9">9</option>
+	<option value="10">10</option>
+	</select>
+	<br>
+
+
+	<label for="sdb">Nombre de salles de bains</label>
+	<select id="sdb" name="sbd">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+  	<option value="8">8</option>
+	</select>
+	<br>
+
+	<label for="floors">Nombre d'étages</label>
+	<select id="floors" name="floors">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+  	<option value="4">4</option>
+	</select>
+  	<br>
+
+	<label for="grade">Note du bien</label>
+	<select id="grade" name="grade">
+	<option value="4">4</option>
+	<option value="5">5</option>
+	<option value="6">6</option>
+	<option value="7">7</option>
+  	<option value="8">8</option>
+	<option value="9">9</option>
+	<option value="10">10</option>
+	<option value="11">11</option>
+  	<option value="12">12</option>
+	<option value="13">13</option>
+	</select>
+  	<br>
+
+
+	<label for="long">Longitude </label>
+	<input type="text" id="long" name="long">btw:[-122.519 - 121.315]
+	</select>
+	<br>
+
+	<label for="lat">Lattitude </label>
+	<input type="text" id="lat" name="lat">btw:[47.1559 - 47.7776]
+	<br>
+
+	<label for="zip">Zip code</label>
+	<input type="text" id="zip" name="zip">btw:[1-68]
+	<br>
+
+	<label for="sold">Année de vente</label>
+	<select type="text" id="sold" name="sold">
+	<option value="2014">2014</option>
+	<option value ="2015">2015</option>
+	</select>
+	<br>
+
+	<label for="sqft">Superficie maison </label>
+	<input type="text" id="sqft" name="sqft">btw:[370-9410 sqft]
+	<br>
+
+
+  	<label for="age">Age de la maison</label>
+	<i> <p>Age entre 6ans et 25 ans Groupe 1</p>
+	  <p>Age entre 26ans et 47 ans Groupe 2</p>
+	  <p>Age entre 48ans et 71 ans Groupe 3</p>
+	  <p>Age entre 72ans et plus Groupe 4</p></i>
+	<input type="text" id="age" name="age">btw:[1-4]
+  	<br>
+
+
+	<label for="visit">Nombre de fois ou le bien a été visité</label>
+	<select id="visit" name="visit">
+	<option value="1">1</option>
+	<option value="2">2</option>
+	<option value="3">3</option>
+	<option value="4">4</option>
+	</select>
+ 	<br>
+
+
+<input type="submit" value="Submit">
+</form>
+<textarea>
+{{prediction_text}}
+</textarea>
+</pre>
+</center>
+</body>
+</html>
+
